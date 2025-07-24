@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leilani Duong-Vazquez</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        .language-toggle {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .language-toggle:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        main {
+            margin-top: 80px;
+            padding: 2rem 0;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #3498db, #8e44ad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.9);
+            margin: 2rem 0;
+            padding: 3rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .education-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+        }
+
+        .education-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .interest-card {
+            background: rgba(52, 152, 219, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .interest-card:hover {
+            transform: translateY(-5px);
+            border-color: #3498db;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        footer {
+            background: rgba(44, 62, 80, 0.9);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 2rem;
+                margin: 1rem 0;
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Leilani Duong-Vazquez</a>
+                <ul class="nav-links">
+                    <li><a href="#about" data-en="About" data-es="Acerca de">About</a></li>
+                    <li><a href="#education" data-en="Education" data-es="Educación">Education</a></li>
+                    <li><a href="#interests" data-en="Interests" data-es="Intereses">Interests</a></li>
+                    <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
+                    <li><button class="language-toggle" onclick="toggleLanguage()">ES</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h1>Leilani Duong-Vazquez</h1>
+                <p class="subtitle" data-en="Actuarial Science & Business Student" data-es="Estudiante de Ciencias Actuariales y Negocios">
+                    Actuarial Science & Business Student
+                </p>
+                <p class="university" data-en="University of Connecticut • Class of 2028" data-es="Universidad de Connecticut • Clase de 2028">
+                    University of Connecticut • Class of 2028
+                </p>
+            </section>
+
+            <section id="about" class="section">
+                <h2 data-en="About Me" data-es="Acerca de Mí">About Me</h2>
+                <div class="about-content">
+                    <p data-en="Welcome to my personal website! I'm Leilani Duong-Vazquez, a passionate student at the University of Connecticut pursuing a double major in Actuarial Science and Business. I'm fascinated by the intersection of mathematics, risk assessment, and business strategy." data-es="¡Bienvenido a mi sitio web personal! Soy Leilani Duong-Vazquez, una estudiante apasionada en la Universidad de Connecticut cursando una doble especialización en Ciencias Actuariales y Negocios. Me fascina la intersección entre las matemáticas, la evaluación de riesgos y la estrategia empresarial.">
+                        Welcome to my personal website! I'm Leilani Duong-Vazquez, a passionate student at the University of Connecticut pursuing a double major in Actuarial Science and Business. I'm fascinated by the intersection of mathematics, risk assessment, and business strategy.
+                    </p>
+                </div>
+            </section>
+
+            <section id="education" class="section">
+                <h2 data-en="Education" data-es="Educación">Education</h2>
+                <div class="education-card">
+                    <h3>University of Connecticut, Storrs</h3>
+                    <p data-en="Double Major: Actuarial Science & Business" data-es="Doble Especialización: Ciencias Actuariales y Negocios">
+                        Double Major: Actuarial Science & Business
+                    </p>
+                    <p data-en="Expected Graduation: 2028" data-es="Graduación Esperada: 2028">
+                        Expected Graduation: 2028
+                    </p>
+                </div>
+            </section>
+
+            <section id="interests" class="section">
+                <h2 data-en="Interests & Goals" data-es="Intereses y Objetivos">Interests & Goals</h2>
+                <div class="interests-grid">
+                    <div class="interest-card">
+                        <h3 data-en="Risk Analysis" data-es="Análisis de Riesgos">Risk Analysis</h3>
+                        <p data-en="Exploring statistical models and their applications in insurance and finance." data-es="Explorando modelos estadísticos y sus aplicaciones en seguros y finanzas.">
+                            Exploring statistical models and their applications in insurance and finance.
+                        </p>
+                    </div>
+                    <div class="interest-card">
+                        <h3 data-en="Business Strategy" data-es="Estrategia Empresarial">Business Strategy</h3>
+                        <p data-en="Understanding market dynamics and strategic decision-making processes." data-es="Entendiendo la dinámica del mercado y los procesos de toma de decisiones estratégicas.">
+                            Understanding market dynamics and strategic decision-making processes.
+                        </p>
+                    </div>
+                    <div class="interest-card">
+                        <h3 data-en="Data Analytics" data-es="Análisis de Datos">Data Analytics</h3>
+                        <p data-en="Leveraging data to drive informed business decisions and predictions." data-es="Aprovechando los datos para impulsar decisiones comerciales informadas y predicciones.">
+                            Leveraging data to drive informed business decisions and predictions.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section">
+                <h2 data-en="Get In Touch" data-es="Contacto">Get In Touch</h2>
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3 data-en="Academic" data-es="Académico">Academic</h3>
+                        <p data-en="Connect with me for academic collaborations or study groups." data-es="Conéctate conmigo para colaboraciones académicas o grupos de estudio.">
+                            Connect with me for academic collaborations or study groups.
+                        </p>
+                    </div>
+                    <div class="contact-card">
+                        <h3 data-en="Professional" data-es="Profesional">Professional</h3>
+                        <p data-en="Interested in internships and career opportunities in actuarial science and business." data-es="Interesada en pasantías y oportunidades profesionales en ciencias actuariales y negocios.">
+                            Interested in internships and career opportunities in actuarial science and business.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p data-en="© 2025 Leilani Duong-Vazquez. Designed with passion for learning and growth." data-es="© 2025 Leilani Duong-Vazquez. Diseñado con pasión por el aprendizaje y el crecimiento.">
+                © 2025 Leilani Duong-Vazquez. Designed with passion for learning and growth.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        let currentLanguage = 'en';
+
+        function toggleLanguage() {
+            const button = document.querySelector('.language-toggle');
+            const elements = document.querySelectorAll('[data-en][data-es]');
+
+            if (currentLanguage === 'en') {
+                currentLanguage = 'es';
+                button.textContent = 'EN';
+                document.documentElement.lang = 'es';
+
+                elements.forEach(element => {
+                    element.textContent = element.getAttribute('data-es');
+                });
+            } else {
+                currentLanguage = 'en';
+                button.textContent = 'ES';
+                document.documentElement.lang = 'en';
+
+                elements.forEach(element => {
+                    element.textContent = element.getAttribute('data-en');
+                });
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
