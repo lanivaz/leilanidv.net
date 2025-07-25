@@ -143,6 +143,28 @@
             margin-bottom: 0.5rem;
         }
 
+        .experience-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+            transition: transform 0.3s ease;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .experience-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-card p {
+            margin-bottom: 0.5rem;
+        }
+
         .interests-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -215,8 +237,10 @@
                 <ul class="nav-links">
                     <li><a href="#about" data-en="About" data-es="Acerca de">About</a></li>
                     <li><a href="#education" data-en="Education" data-es="Educación">Education</a></li>
+                    <li><a href="#experience" data-en="Experience" data-es="Experiencia">Experience</a></li>
                     <li><a href="#interests" data-en="Interests" data-es="Intereses">Interests</a></li>
                     <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
+                    <li><a href="https://www.linkedin.com/in/leilani-duong-v%C3%A1zquez-a80328324/" target="_blank" style="color: #0077b5; font-weight: bold;">LinkedIn</a></li>
                     <li><button class="language-toggle" onclick="toggleLanguage()">ES</button></li>
                 </ul>
             </nav>
@@ -227,11 +251,11 @@
         <div class="container">
             <section class="hero">
                 <h1>Leilani Duong-Vázquez</h1>
-                <p class="subtitle" data-en="Actuarial Science & Business Student" data-es="Estudiante de Ciencias Actuariales y Negocios">
-                    Actuarial Science & Business Student
+                <p class="subtitle" data-en="Actuarial Science Student" data-es="Estudiante de Ciencias Actuariales">
+                    Actuarial Science Student
                 </p>
-                <p class="university" data-en="University of Connecticut • Class of 2028" data-es="Universidad de Connecticut • Clase de 2028">
-                    University of Connecticut • Class of 2028
+                <p class="university" data-en="University of Connecticut • Class of 2029" data-es="Universidad de Connecticut • Clase de 2029">
+                    University of Connecticut • Class of 2029
                 </p>
             </section>
 
@@ -248,12 +272,45 @@
                 <h2 data-en="Education" data-es="Educación">Education</h2>
                 <div class="education-card">
                     <h3>University of Connecticut, Storrs</h3>
-                    <p data-en="Double Major: Actuarial Science & Business" data-es="Doble Especialización: Ciencias Actuariales y Negocios">
-                        Double Major: Actuarial Science & Business
+                    <p data-en="Major: Actuarial Science" data-es="Especialización: Ciencias Actuariales">
+                        Major: Actuarial Science
                     </p>
-                    <p data-en="Expected Graduation: 2028" data-es="Graduación Esperada: 2028">
-                        Expected Graduation: 2028
+                    <p data-en="Expected Graduation: 2029
+                    " data-es="Graduación Esperada: 2029">
+                        Expected Graduation: 2029
                     </p>
+                </div> 
+            </section>
+
+            <section id="experience" class="section">
+                <h2 data-en="Work Experience" data-es="Experiencia Laboral">Work Experience</h2>
+                <div class="experience-card">
+                    <h3 data-en="Small Business Owner" data-es="Propietaria de Pequeño Negocio">Small Business Owner</h3>
+                    <p><strong>Lovely by Leilani · Self-employed</strong></p>
+                    <p data-en="Apr 2020 – Present · 5 yrs 4 mos" data-es="Abr 2020 – Presente · 5 años 4 meses">Apr 2020 – Present · 5 yrs 4 mos</p>
+                    <p>Middletown, Connecticut, United States · Hybrid</p>
+                    <ul>
+                        <li>Designs and creates unique jewelry pieces using locally sourced sea glass materials</li>
+                        <li>Manages e-commerce website (<a href="https://lovelybyleilani.com" target="_blank" style="color: #fff; text-decoration: underline;">lovelybyleilani.com</a>) including inventory, photography, and product listing</li>
+                        <li>Represents business at craft fairs throughout Connecticut and Massachusetts</li>
+                        <li>Handles all aspects of business operation including marketing, sales, and customer service</li>
+                    </ul>
+                    <p><em>Entrepreneurship, Small Business Financial Management and +3 skills</em></p>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://lovelybyleilani.com" target="_blank" style="background: #fff; color: #f5576c; padding: 0.5rem 1rem; border-radius: 8px; font-weight: bold; text-decoration: none;">Lovely by Leilani Website</a>
+                        <span style="display:block; margin-top:0.5rem; color:#fff;">Link to e-commerce website through which Lovely by Leilani conducts online sales</span>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <h3 data-en="Cashier" data-es="Cajera">Cashier</h3>
+                    <p><strong>Big Y World Class Market · Part-time</strong></p>
+                    <p data-en="May 2024 – Jul 2025 · 1 yr 3 mos" data-es="Mayo 2024 – Jul 2025 · 1 año 3 meses">May 2024 – Jul 2025 · 1 yr 3 mos</p>
+                    <p>Middletown, Connecticut, United States · On-site</p>
+                    <ul>
+                        <li>Processed customer transactions efficiently and accurately while providing excellent customer service</li>
+                        <li>Handled cash, credit, and other payment methods while maintaining a balanced drawer</li>
+                        <li>Collaborated with team members to ensure a positive shopping experience</li>
+                    </ul>
                 </div>
             </section>
 
@@ -295,6 +352,13 @@
                         <p data-en="Interested in internships and career opportunities in actuarial science and business." data-es="Interesada en pasantías y oportunidades profesionales en ciencias actuariales y negocios.">
                             Interested in internships and career opportunities in actuarial science and business.
                         </p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>LinkedIn</h3>
+                        <p data-en="Connect with me professionally on LinkedIn" data-es="Conéctate conmigo profesionalmente en LinkedIn">
+                            Connect with me professionally on LinkedIn
+                        </p>
+                        <a href="https://www.linkedin.com/in/leilani-duong-v%C3%A1zquez-a80328324/" target="_blank" style="color: white; text-decoration: underline; font-weight: bold;">View Profile</a>
                     </div>
                 </div>
             </section>
