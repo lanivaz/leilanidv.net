@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leilani Duong-Vázquez — Actuarial Science student at the University of Connecticut, Class of 2029. Catastrophe risk and pricing intern at Yokahu, a Lloyd's of London coverholder. Seeking a Summer 2027 actuarial internship.">
     <title>Leilani Duong-Vázquez</title>
     <style>
         * {
@@ -40,6 +41,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
         }
 
         .logo {
@@ -52,8 +55,9 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.5rem;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .nav-links a {
@@ -75,6 +79,7 @@
             border-radius: 25px;
             cursor: pointer;
             font-weight: 500;
+            font-family: inherit;
             transition: all 0.3s ease;
         }
 
@@ -84,7 +89,7 @@
         }
 
         main {
-            margin-top: 80px;
+            margin-top: 90px;
             padding: 2rem 0;
         }
 
@@ -120,7 +125,25 @@
         .hero p {
             font-size: 1.2rem;
             color: #7f8c8d;
-            margin-bottom: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero .subtitle {
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 1.35rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 0.45rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.3px;
         }
 
         .section {
@@ -141,6 +164,14 @@
             display: inline-block;
         }
 
+        .about-content p {
+            margin-bottom: 1.25rem;
+        }
+
+        .about-content p:last-child {
+            margin-bottom: 0;
+        }
+
         .education-card {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -159,8 +190,16 @@
             color: white;
             padding: 2rem;
             border-radius: 15px;
-            margin: 1rem 0;
+            margin: 1.5rem 0;
             transition: transform 0.3s ease;
+        }
+
+        .experience-card.featured {
+            background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+        }
+
+        .experience-card.muted {
+            background: linear-gradient(135deg, #8e9eab 0%, #5c6b73 100%);
         }
 
         .experience-card:hover {
@@ -169,11 +208,108 @@
 
         .experience-card h3 {
             font-size: 1.5rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
 
-        .experience-card p {
-            margin-bottom: 0.5rem;
+        .card-org {
+            font-weight: bold;
+            font-size: 1.05rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .card-meta {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 0.2rem;
+        }
+
+        .experience-card ul,
+        .project-card ul {
+            margin: 1.25rem 0 0 1.25rem;
+        }
+
+        .experience-card li,
+        .project-card li {
+            margin-bottom: 0.75rem;
+        }
+
+        .experience-card li:last-child,
+        .project-card li:last-child {
+            margin-bottom: 0;
+        }
+
+        .site-link {
+            display: inline-block;
+            margin-top: 1.25rem;
+            background: #fff;
+            color: #c0392b;
+            padding: 0.55rem 1.2rem;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .site-link:hover {
+            transform: translateY(-2px);
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+        }
+
+        .project-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .project-card p {
+            margin-bottom: 0.75rem;
+        }
+
+        .project-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .skill-tag {
+            background: rgba(52, 152, 219, 0.12);
+            border: 2px solid rgba(52, 152, 219, 0.35);
+            padding: 0.5rem 1.1rem;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .skill-tag.primary {
+            background: #3498db;
+            border-color: #3498db;
+            color: white;
+        }
+
+        .activity-card {
+            background: rgba(142, 68, 173, 0.08);
+            border-left: 4px solid #8e44ad;
+            padding: 1.25rem 1.5rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        .activity-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.3rem;
+            color: #2c3e50;
         }
 
         .interests-grid {
@@ -197,6 +333,10 @@
             border-color: #3498db;
         }
 
+        .interest-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
         .contact-info {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -212,6 +352,15 @@
             text-align: center;
         }
 
+        .contact-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card a {
+            color: white;
+            font-weight: bold;
+        }
+
         footer {
             background: rgba(44, 62, 80, 0.9);
             color: white;
@@ -223,6 +372,7 @@
         @media (max-width: 768px) {
             .nav-links {
                 gap: 1rem;
+                font-size: 0.9rem;
             }
 
             .hero h1 {
@@ -233,10 +383,10 @@
                 padding: 2rem;
                 margin: 1rem 0;
             }
-        }
 
-        .hidden {
-            display: none;
+            main {
+                margin-top: 130px;
+            }
         }
     </style>
 </head>
@@ -249,9 +399,10 @@
                     <li><a href="#about" data-en="About" data-es="Acerca de">About</a></li>
                     <li><a href="#education" data-en="Education" data-es="Educación">Education</a></li>
                     <li><a href="#experience" data-en="Experience" data-es="Experiencia">Experience</a></li>
-                    <li><a href="#interests" data-en="Interests" data-es="Intereses">Interests</a></li>
+                    <li><a href="#skills" data-en="Skills" data-es="Habilidades">Skills</a></li>
+                    <li><a href="#leadership" data-en="Leadership" data-es="Liderazgo">Leadership</a></li>
                     <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
-                    <li><a href="https://www.linkedin.com/in/leilani-duong-v%C3%A1zquez-a80328324/" target="_blank" style="color: #0077b5; font-weight: bold;">LinkedIn</a></li>
+                    <li><a href="https://www.linkedin.com/in/leilani-duong-v%C3%A1zquez-a80328324/" target="_blank" rel="noopener" style="color: #0077b5; font-weight: bold;">LinkedIn</a></li>
                     <li><button class="language-toggle" onclick="toggleLanguage()">ES</button></li>
                 </ul>
             </nav>
@@ -263,19 +414,37 @@
             <section class="hero">
                 <img src="Portrait2.jpeg" alt="Leilani Duong-Vázquez" class="profile-image">
                 <h1>Leilani Duong-Vázquez</h1>
-                <p class="subtitle" data-en="Actuarial Science Student" data-es="Estudiante de Ciencias Actuariales">
-                    Actuarial Science Student
+                <span class="badge" data-en="Seeking Summer 2027 Actuarial Internship" data-es="Buscando pasantía actuarial para el verano de 2027">
+                    Seeking Summer 2027 Actuarial Internship
+                </span>
+                <p class="subtitle" data-en="Actuarial Science @ UConn '29" data-es="Ciencias Actuariales @ UConn '29">
+                    Actuarial Science @ UConn '29
                 </p>
-                <p class="university" data-en="University of Connecticut • Class of 2029" data-es="Universidad de Connecticut • Clase de 2029">
-                    University of Connecticut • Class of 2029
+                <p data-en="Catastrophe Risk &amp; Pricing Intern @ Yokahu (Lloyd's of London)" data-es="Pasante de riesgo catastrófico y tarificación @ Yokahu (Lloyd's de Londres)">
+                    Catastrophe Risk &amp; Pricing Intern @ Yokahu (Lloyd's of London)
+                </p>
+                <p data-en="Bilingual English / Spanish • Founder, Lovely by Leilani" data-es="Bilingüe inglés / español • Fundadora, Lovely by Leilani">
+                    Bilingual English / Spanish • Founder, Lovely by Leilani
                 </p>
             </section>
 
             <section id="about" class="section">
                 <h2 data-en="About Me" data-es="Acerca de Mí">About Me</h2>
                 <div class="about-content">
-                    <p data-en="Welcome to my personal website! I'm Leilani Duong-Vázquez, a passionate student at the University of Connecticut pursuing a major in Actuarial Science. I'm fascinated by the intersection of mathematics, risk assessment, and business strategy." data-es="¡Bienvenido a mi sitio web personal! Soy Leilani Duong-Vazquez, una estudiante apasionada en la Universidad de Connecticut cursando una especialización en Ciencias Actuariales. Me fascina la intersección entre las matemáticas, la evaluación de riesgos y la estrategia empresarial.">
-                        Welcome to my personal website! I'm Leilani Duong-Vázquez, a passionate student at the University of Connecticut pursuing a major in Actuarial Science. I'm fascinated by the intersection of mathematics, risk assessment, and business strategy.
+                    <p data-en="I spent the summer after my freshman year in London, pricing hurricane risk inside the Lloyd's market. Yokahu is a team of under ten building parametric weather insurance, and an approved Lloyd's Coverholder and Lloyd's Lab alumnus. My job was to find a way to price a margin that adjusts to each insured location, instead of charging the same flat number everywhere." data-es="Pasé el verano después de mi primer año en Londres, tarificando el riesgo de huracanes dentro del mercado de Lloyd's. Yokahu es un equipo de menos de diez personas que desarrolla seguros paramétricos contra el clima, y es un Coverholder aprobado de Lloyd's y alumno del Lloyd's Lab. Mi trabajo consistió en encontrar la manera de calcular un margen que se ajustara a cada ubicación asegurada, en lugar de cobrar la misma cifra fija en todas partes.">
+                        I spent the summer after my freshman year in London, pricing hurricane risk inside the Lloyd's market. Yokahu is a team of under ten building parametric weather insurance, and an approved Lloyd's Coverholder and Lloyd's Lab alumnus. My job was to find a way to price a margin that adjusts to each insured location, instead of charging the same flat number everywhere.
+                    </p>
+                    <p data-en="What surprised me most was how much of the work came down to judgment. Deciding which assumptions were worth defending, and how to explain a tail risk calculation to people who weren't going to open the spreadsheet." data-es="Lo que más me sorprendió fue cuánto del trabajo dependía del criterio. Decidir qué supuestos valía la pena defender, y cómo explicar un cálculo de riesgo de cola a personas que no iban a abrir la hoja de cálculo.">
+                        What surprised me most was how much of the work came down to judgment. Deciding which assumptions were worth defending, and how to explain a tail risk calculation to people who weren't going to open the spreadsheet.
+                    </p>
+                    <p data-en="Earlier in my freshman year I worked on a Goldenson Center case competition about how CVS Health and Aetna could address social determinants of health in underserved communities. Both projects came back to the same question: how do you get coverage to people the market usually skips? That's the work I want to keep doing." data-es="Antes, durante mi primer año, participé en una competencia de casos del Centro Goldenson sobre cómo CVS Health y Aetna podrían abordar los determinantes sociales de la salud en comunidades desatendidas. Ambos proyectos me llevaron a la misma pregunta: ¿cómo se logra que la cobertura llegue a las personas que el mercado suele pasar por alto? Ese es el trabajo que quiero seguir haciendo.">
+                        Earlier in my freshman year I worked on a Goldenson Center case competition about how CVS Health and Aetna could address social determinants of health in underserved communities. Both projects came back to the same question: how do you get coverage to people the market usually skips? That's the work I want to keep doing.
+                    </p>
+                    <p data-en="I've also run Lovely by Leilani, a sea glass jewelry business, since middle school. Six years of setting prices and guessing how much inventory to bring to a craft fair turns out to be decent preparation for pricing work. I still make every piece by hand." data-es="También dirijo Lovely by Leilani, un negocio de joyería de vidrio de mar, desde la secundaria. Seis años fijando precios y calculando cuánto inventario llevar a una feria de artesanías resultan ser buena preparación para el trabajo de tarificación. Sigo haciendo cada pieza a mano.">
+                        I've also run Lovely by Leilani, a sea glass jewelry business, since middle school. Six years of setting prices and guessing how much inventory to bring to a craft fair turns out to be decent preparation for pricing work. I still make every piece by hand.
+                    </p>
+                    <p data-en="I'm looking for a Summer 2027 actuarial internship, open to any practice area." data-es="Busco una pasantía actuarial para el verano de 2027, abierta a cualquier área de práctica.">
+                        I'm looking for a Summer 2027 actuarial internship, open to any practice area.
                     </p>
                 </div>
             </section>
@@ -287,64 +456,149 @@
                     <p data-en="Major: Actuarial Science" data-es="Especialización: Ciencias Actuariales">
                         Major: Actuarial Science
                     </p>
-                    <p data-en="Expected Graduation: 2029
-                    " data-es="Graduación Esperada: 2029">
-                        Expected Graduation: 2029
+                    <p data-en="Expected Graduation: May 2029" data-es="Graduación esperada: mayo de 2029">
+                        Expected Graduation: May 2029
                     </p>
-                </div> 
+                    <p data-en="Dean's List with a 4.0 in Fall 2025" data-es="Cuadro de Honor con 4.0 en el otoño de 2025">
+                        Dean's List with a 4.0 in Fall 2025
+                    </p>
+                </div>
             </section>
 
             <section id="experience" class="section">
-                <h2 data-en="Work Experience" data-es="Experiencia Laboral">Work Experience</h2>
-                <div class="experience-card">
-                    <h3 data-en="Small Business Owner" data-es="Propietaria de Pequeño Negocio">Small Business Owner</h3>
-                    <p><strong>Lovely by Leilani · Self-employed</strong></p>
-                    <p data-en="Apr 2020 – Present · 5 yrs 4 mos" data-es="Abr 2020 – Presente · 5 años 4 meses">Apr 2020 – Present · 5 yrs 4 mos</p>
-                    <p>Middletown, Connecticut, United States · Hybrid</p>
+                <h2 data-en="Experience" data-es="Experiencia">Experience</h2>
+
+                <div class="experience-card featured">
+                    <h3 data-en="Data Analysis Actuarial Intern" data-es="Pasante Actuarial de Análisis de Datos">Data Analysis Actuarial Intern</h3>
+                    <p class="card-org">Yokahu</p>
+                    <p class="card-meta" data-en="Jun 2026 – Jul 2026 · 2 mos · Internship" data-es="Jun 2026 – Jul 2026 · 2 meses · Pasantía">Jun 2026 – Jul 2026 · 2 mos · Internship</p>
+                    <p class="card-meta" data-en="London, England, United Kingdom · Hybrid" data-es="Londres, Inglaterra, Reino Unido · Híbrido">London, England, United Kingdom · Hybrid</p>
                     <ul>
-                        <li>Designs and creates unique jewelry pieces using locally sourced sea glass materials</li>
-                        <li>Manages e-commerce website (<a href="https://lovelybyleilani.com" target="_blank" style="color: #fff; text-decoration: underline;">lovelybyleilani.com</a>) including inventory, photography, and product listing</li>
-                        <li>Represents business at craft fairs throughout Connecticut and Massachusetts</li>
-                        <li>Handles all aspects of business operation including marketing, sales, and customer service</li>
+                        <li data-en="Replaced a flat margin applied uniformly to every insured location with a dynamic one priced off each location's own contribution to portfolio catastrophe risk." data-es="Reemplacé un margen fijo aplicado por igual a cada ubicación asegurada por uno dinámico, calculado según la contribución de cada ubicación al riesgo catastrófico de la cartera.">
+                            Replaced a flat margin applied uniformly to every insured location with a dynamic one priced off each location's own contribution to portfolio catastrophe risk.
+                        </li>
+                        <li data-en="Built the pricing model in Excel, using Python and generative AI, drawing on 41,000 simulated years of hurricane losses from the Reask DeepCyc event set to measure portfolio tail risk and how much individual locations compound or offset each other's exposure." data-es="Construí el modelo de tarificación en Excel, usando Python e inteligencia artificial generativa, a partir de 41.000 años simulados de pérdidas por huracanes del conjunto de eventos Reask DeepCyc, para medir el riesgo de cola de la cartera y cuánto se acumulan o se compensan las exposiciones entre ubicaciones.">
+                            Built the pricing model in Excel, using Python and generative AI, drawing on 41,000 simulated years of hurricane losses from the Reask DeepCyc event set to measure portfolio tail risk and how much individual locations compound or offset each other's exposure.
+                        </li>
+                        <li data-en="Priced each location off its marginal contribution to the portfolio's worst 1% of years (Tail Value at Risk). Concentrated locations got loaded, geographically diversified ones got a credit." data-es="Tarifiqué cada ubicación según su contribución marginal al peor 1% de los años de la cartera (Tail Value at Risk). Las ubicaciones concentradas recibieron un recargo; las geográficamente diversificadas, un descuento.">
+                            Priced each location off its marginal contribution to the portfolio's worst 1% of years (Tail Value at Risk). Concentrated locations got loaded, geographically diversified ones got a credit.
+                        </li>
+                        <li data-en="Documented the methodology and everything still unresolved in a technical handover, and a colleague carried the project forward after the internship ended." data-es="Documenté la metodología y todo lo que quedaba sin resolver en un traspaso técnico, y un colega continuó el proyecto después de que terminó la pasantía.">
+                            Documented the methodology and everything still unresolved in a technical handover, and a colleague carried the project forward after the internship ended.
+                        </li>
+                        <li data-en="Worked on a team of under ten at an approved Lloyd's Coverholder and Lloyd's Lab alumnus, seeing directly how brokers, MGAs, carriers, and data providers transact in the Lloyd's market." data-es="Trabajé en un equipo de menos de diez personas en un Coverholder aprobado de Lloyd's y alumno del Lloyd's Lab, viendo directamente cómo negocian corredores, MGAs, aseguradoras y proveedores de datos en el mercado de Lloyd's.">
+                            Worked on a team of under ten at an approved Lloyd's Coverholder and Lloyd's Lab alumnus, seeing directly how brokers, MGAs, carriers, and data providers transact in the Lloyd's market.
+                        </li>
                     </ul>
-                    <p><em>Entrepreneurship, Small Business Financial Management and +3 skills</em></p>
-                    <div style="margin-top: 1rem;">
-                        <a href="https://lovelybyleilani.com" target="_blank" style="background: #fff; color: #f5576c; padding: 0.5rem 1rem; border-radius: 8px; font-weight: bold; text-decoration: none;">Lovely by Leilani Website</a>
-                        <span style="display:block; margin-top:0.5rem; color:#fff;">Link to e-commerce website through which Lovely by Leilani conducts online sales</span>
-                    </div>
                 </div>
+
                 <div class="experience-card">
-                    <h3 data-en="Cashier" data-es="Cajera">Cashier</h3>
-                    <p><strong>Big Y World Class Market · Part-time</strong></p>
-                    <p data-en="May 2024 – Jul 2025 · 1 yr 3 mos" data-es="Mayo 2024 – Jul 2025 · 1 año 3 meses">May 2024 – Jul 2025 · 1 yr 3 mos</p>
-                    <p>Middletown, Connecticut, United States · On-site</p>
+                    <h3 data-en="Founder and Owner" data-es="Fundadora y Propietaria">Founder and Owner</h3>
+                    <p class="card-org">Lovely by Leilani</p>
+                    <p class="card-meta" data-en="Apr 2020 – Present · Self-employed" data-es="Abr 2020 – Presente · Autoempleada">Apr 2020 – Present · Self-employed</p>
+                    <p class="card-meta" data-en="Middletown, Connecticut, United States · Hybrid" data-es="Middletown, Connecticut, Estados Unidos · Híbrido">Middletown, Connecticut, United States · Hybrid</p>
                     <ul>
-                        <li>Processed customer transactions efficiently and accurately while providing excellent customer service</li>
-                        <li>Handled cash, credit, and other payment methods while maintaining a balanced drawer</li>
-                        <li>Collaborated with team members to ensure a positive shopping experience</li>
+                        <li data-en="Set retail pricing and margins across the product line, tracking per-piece material cost and sell-through to decide what to make more of." data-es="Fijo los precios de venta y los márgenes de toda la línea de productos, siguiendo el costo de materiales por pieza y la rotación para decidir qué producir más.">
+                            Set retail pricing and margins across the product line, tracking per-piece material cost and sell-through to decide what to make more of.
+                        </li>
+                        <li data-en="Forecast inventory and production against seasonal demand for craft fairs across Connecticut and Massachusetts, where committing to the wrong mix means carrying it home." data-es="Proyecto el inventario y la producción según la demanda estacional para ferias de artesanías en Connecticut y Massachusetts, donde equivocarse en la selección significa llevárselo todo de vuelta a casa.">
+                            Forecast inventory and production against seasonal demand for craft fairs across Connecticut and Massachusetts, where committing to the wrong mix means carrying it home.
+                        </li>
+                        <li data-en="Run lovelybyleilani.com end to end: listings, product photography, fulfillment, and customer service." data-es="Gestiono lovelybyleilani.com de principio a fin: publicaciones, fotografía de producto, envíos y atención al cliente.">
+                            Run lovelybyleilani.com end to end: listings, product photography, fulfillment, and customer service.
+                        </li>
+                        <li data-en="Manage the business finances, including cost of goods, sales tax, and how much of each season's revenue goes back into materials." data-es="Administro las finanzas del negocio, incluyendo el costo de mercancía, el impuesto sobre las ventas y cuánto de los ingresos de cada temporada se reinvierte en materiales.">
+                            Manage the business finances, including cost of goods, sales tax, and how much of each season's revenue goes back into materials.
+                        </li>
+                        <li data-en="Design and make every piece by hand from locally sourced sea glass, six years and counting." data-es="Diseño y hago cada pieza a mano con vidrio de mar de origen local, seis años y contando.">
+                            Design and make every piece by hand from locally sourced sea glass, six years and counting.
+                        </li>
                     </ul>
+                    <a href="https://lovelybyleilani.com" target="_blank" rel="noopener" class="site-link">lovelybyleilani.com</a>
+                </div>
+
+                <div class="experience-card muted">
+                    <h3 data-en="Cashier" data-es="Cajera">Cashier</h3>
+                    <p class="card-org">Big Y World Class Market</p>
+                    <p class="card-meta" data-en="May 2024 – Jul 2025 · 1 yr 3 mos · Part-time" data-es="Mayo 2024 – Jul 2025 · 1 año 3 meses · Medio tiempo">May 2024 – Jul 2025 · 1 yr 3 mos · Part-time</p>
+                    <p class="card-meta" data-en="Middletown, Connecticut, United States · On-site" data-es="Middletown, Connecticut, Estados Unidos · Presencial">Middletown, Connecticut, United States · On-site</p>
+                    <ul>
+                        <li data-en="Ran a register through peak store hours and closed out a balanced drawer across cash and card." data-es="Manejé una caja registradora durante las horas de mayor afluencia y cerré con el saldo cuadrado entre efectivo y tarjeta.">
+                            Ran a register through peak store hours and closed out a balanced drawer across cash and card.
+                        </li>
+                        <li data-en="Worked the front end with a rotating team, handling price questions, returns, and the occasional unhappy customer." data-es="Trabajé en el frente de tienda con un equipo rotativo, atendiendo consultas de precios, devoluciones y algún que otro cliente molesto.">
+                            Worked the front end with a rotating team, handling price questions, returns, and the occasional unhappy customer.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="projects" class="section">
+                <h2 data-en="Projects" data-es="Proyectos">Projects</h2>
+                <div class="project-card">
+                    <h3 data-en="Goldenson Center Case Competition" data-es="Competencia de Casos del Centro Goldenson">Goldenson Center Case Competition</h3>
+                    <p class="card-meta" data-en="University of Connecticut · Freshman year · Team of four" data-es="Universidad de Connecticut · Primer año · Equipo de cuatro">University of Connecticut · Freshman year · Team of four</p>
+                    <p data-en="The prompt asked how CVS Health and Aetna could use their nationwide presence to address social determinants of health in underserved communities." data-es="El planteamiento preguntaba cómo CVS Health y Aetna podrían usar su presencia nacional para abordar los determinantes sociales de la salud en comunidades desatendidas.">
+                        The prompt asked how CVS Health and Aetna could use their nationwide presence to address social determinants of health in underserved communities.
+                    </p>
+                    <p data-en="With three teammates, we proposed two programs, one a tiered produce prescription service for chronically ill, food-insecure Medicare Advantage members, then compared which one CVS could realistically sustain." data-es="Con tres compañeras de equipo, propusimos dos programas, uno de ellos un servicio escalonado de prescripción de alimentos frescos para afiliados de Medicare Advantage con enfermedades crónicas e inseguridad alimentaria, y luego comparamos cuál podría sostener CVS de manera realista.">
+                        With three teammates, we proposed two programs, one a tiered produce prescription service for chronically ill, food-insecure Medicare Advantage members, then compared which one CVS could realistically sustain.
+                    </p>
+                </div>
+            </section>
+
+            <section id="skills" class="section">
+                <h2 data-en="Skills" data-es="Habilidades">Skills</h2>
+                <div class="skills-list">
+                    <span class="skill-tag primary" data-en="Actuarial Pricing" data-es="Tarificación Actuarial">Actuarial Pricing</span>
+                    <span class="skill-tag primary" data-en="Catastrophe Risk Modeling" data-es="Modelado de Riesgo Catastrófico">Catastrophe Risk Modeling</span>
+                    <span class="skill-tag primary">Python</span>
+                    <span class="skill-tag" data-en="Parametric Insurance" data-es="Seguros Paramétricos">Parametric Insurance</span>
+                    <span class="skill-tag" data-en="Financial Modeling" data-es="Modelado Financiero">Financial Modeling</span>
+                    <span class="skill-tag">Microsoft Excel</span>
+                    <span class="skill-tag" data-en="Data Analysis" data-es="Análisis de Datos">Data Analysis</span>
+                    <span class="skill-tag" data-en="Reinsurance" data-es="Reaseguro">Reinsurance</span>
+                    <span class="skill-tag" data-en="Entrepreneurship" data-es="Emprendimiento">Entrepreneurship</span>
+                    <span class="skill-tag" data-en="Small Business Financial Management" data-es="Gestión Financiera de Pequeñas Empresas">Small Business Financial Management</span>
+                    <span class="skill-tag" data-en="English / Spanish" data-es="Inglés / Español">English / Spanish</span>
+                </div>
+            </section>
+
+            <section id="leadership" class="section">
+                <h2 data-en="Leadership &amp; Activities" data-es="Liderazgo y Actividades">Leadership &amp; Activities</h2>
+                <div class="activity-card">
+                    <h3 data-en="UConn Actuarial Society" data-es="Sociedad Actuarial de UConn">UConn Actuarial Society</h3>
+                    <p data-en="High School Outreach and Social committees" data-es="Comités de Divulgación en Escuelas Secundarias y de Actividades Sociales">High School Outreach and Social committees</p>
+                </div>
+                <div class="activity-card">
+                    <h3 data-en="Junior Panhellenic Council" data-es="Consejo Panhelénico Junior">Junior Panhellenic Council</h3>
+                    <p data-en="Vice President of Diversity, Equity, and Inclusion" data-es="Vicepresidenta de Diversidad, Equidad e Inclusión">Vice President of Diversity, Equity, and Inclusion</p>
+                </div>
+                <div class="activity-card">
+                    <h3 data-en="Organization of Latino Actuaries (OLA)" data-es="Organización de Actuarios Latinos (OLA)">Organization of Latino Actuaries (OLA)</h3>
+                    <p data-en="Sponsored to attend the Avanza conference twice: San Diego in 2025 and Chicago in 2026" data-es="Patrocinada para asistir dos veces a la conferencia Avanza: San Diego en 2025 y Chicago en 2026">Sponsored to attend the Avanza conference twice: San Diego in 2025 and Chicago in 2026</p>
                 </div>
             </section>
 
             <section id="interests" class="section">
-                <h2 data-en="Interests & Goals" data-es="Intereses y Objetivos">Interests & Goals</h2>
+                <h2 data-en="Focus Areas" data-es="Áreas de Interés">Focus Areas</h2>
                 <div class="interests-grid">
                     <div class="interest-card">
-                        <h3 data-en="Risk Analysis" data-es="Análisis de Riesgos">Risk Analysis</h3>
-                        <p data-en="Exploring statistical models and their applications in insurance and finance." data-es="Explorando modelos estadísticos y sus aplicaciones en seguros y finanzas.">
-                            Exploring statistical models and their applications in insurance and finance.
+                        <h3 data-en="Catastrophe Risk" data-es="Riesgo Catastrófico">Catastrophe Risk</h3>
+                        <p data-en="Tail risk, event sets, and how concentrated exposure compounds inside a portfolio." data-es="Riesgo de cola, conjuntos de eventos y cómo la exposición concentrada se acumula dentro de una cartera.">
+                            Tail risk, event sets, and how concentrated exposure compounds inside a portfolio.
                         </p>
                     </div>
                     <div class="interest-card">
-                        <h3 data-en="Business Strategy" data-es="Estrategia Empresarial">Business Strategy</h3>
-                        <p data-en="Understanding market dynamics and strategic decision-making processes." data-es="Entendiendo la dinámica del mercado y los procesos de toma de decisiones estratégicas.">
-                            Understanding market dynamics and strategic decision-making processes.
+                        <h3 data-en="Parametric Insurance" data-es="Seguros Paramétricos">Parametric Insurance</h3>
+                        <p data-en="Coverage that pays on a measured trigger rather than an adjusted loss, and where that structure fits." data-es="Cobertura que paga según un disparador medido en lugar de una pérdida ajustada, y dónde encaja esa estructura.">
+                            Coverage that pays on a measured trigger rather than an adjusted loss, and where that structure fits.
                         </p>
                     </div>
                     <div class="interest-card">
-                        <h3 data-en="Data Analytics" data-es="Análisis de Datos">Data Analytics</h3>
-                        <p data-en="Leveraging data to drive informed business decisions and predictions." data-es="Aprovechando los datos para impulsar decisiones comerciales informadas y predicciones.">
-                            Leveraging data to drive informed business decisions and predictions.
+                        <h3 data-en="Access and Underserved Markets" data-es="Acceso y Mercados Desatendidos">Access and Underserved Markets</h3>
+                        <p data-en="Getting coverage to the people and places the market usually skips." data-es="Lograr que la cobertura llegue a las personas y lugares que el mercado suele pasar por alto.">
+                            Getting coverage to the people and places the market usually skips.
                         </p>
                     </div>
                 </div>
@@ -354,23 +608,22 @@
                 <h2 data-en="Get In Touch" data-es="Contacto">Get In Touch</h2>
                 <div class="contact-info">
                     <div class="contact-card">
-                        <h3 data-en="Academic" data-es="Académico">Academic</h3>
-                        <p data-en="Connect with me for academic collaborations or study groups." data-es="Conéctate conmigo para colaboraciones académicas o grupos de estudio.">
-                            Connect with me for academic collaborations or study groups. My email is duong.vazquez.l@gmail.com.
-                        </p>
+                        <h3 data-en="Email" data-es="Correo Electrónico">Email</h3>
+                        <p data-en="The best way to reach me." data-es="La mejor manera de contactarme.">The best way to reach me.</p>
+                        <a href="mailto:duong.vazquez.l@gmail.com">duong.vazquez.l@gmail.com</a>
                     </div>
                     <div class="contact-card">
-                        <h3 data-en="Professional" data-es="Profesional">Professional</h3>
-                        <p data-en="Interested in internships and career opportunities in actuarial science and business." data-es="Interesada en pasantías y oportunidades profesionales en ciencias actuariales y negocios.">
-                            Interested in internships and career opportunities in actuarial science and business.
+                        <h3 data-en="Internships" data-es="Pasantías">Internships</h3>
+                        <p data-en="Seeking a Summer 2027 actuarial internship, open to any practice area." data-es="Busco una pasantía actuarial para el verano de 2027, abierta a cualquier área de práctica.">
+                            Seeking a Summer 2027 actuarial internship, open to any practice area.
                         </p>
                     </div>
                     <div class="contact-card">
                         <h3>LinkedIn</h3>
-                        <p data-en="Connect with me professionally on LinkedIn" data-es="Conéctate conmigo profesionalmente en LinkedIn">
-                            Connect with me professionally on LinkedIn
+                        <p data-en="Connect with me professionally on LinkedIn." data-es="Conéctate conmigo profesionalmente en LinkedIn.">
+                            Connect with me professionally on LinkedIn.
                         </p>
-                        <a href="https://www.linkedin.com/in/leilani-duong-v%C3%A1zquez-a80328324/" target="_blank" style="color: white; text-decoration: underline; font-weight: bold;">View Profile</a>
+                        <a href="https://www.linkedin.com/in/leilani-duong-v%C3%A1zquez-a80328324/" target="_blank" rel="noopener">View Profile</a>
                     </div>
                 </div>
             </section>
@@ -379,8 +632,8 @@
 
     <footer>
         <div class="container">
-            <p data-en="© 2025 Leilani Duong-Vázquez. Designed with passion for learning and growth." data-es="© 2025 Leilani Duong-Vazquez. Diseñado con pasión por el aprendizaje y el crecimiento.">
-                © 2025 Leilani Duong-Vázquez. Designed with passion for learning and growth.
+            <p data-en="© 2026 Leilani Duong-Vázquez" data-es="© 2026 Leilani Duong-Vázquez">
+                © 2026 Leilani Duong-Vázquez
             </p>
         </div>
     </footer>
@@ -392,23 +645,13 @@
             const button = document.querySelector('.language-toggle');
             const elements = document.querySelectorAll('[data-en][data-es]');
 
-            if (currentLanguage === 'en') {
-                currentLanguage = 'es';
-                button.textContent = 'EN';
-                document.documentElement.lang = 'es';
+            currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
+            button.textContent = currentLanguage === 'en' ? 'ES' : 'EN';
+            document.documentElement.lang = currentLanguage;
 
-                elements.forEach(element => {
-                    element.textContent = element.getAttribute('data-es');
-                });
-            } else {
-                currentLanguage = 'en';
-                button.textContent = 'ES';
-                document.documentElement.lang = 'en';
-
-                elements.forEach(element => {
-                    element.textContent = element.getAttribute('data-en');
-                });
-            }
+            elements.forEach(element => {
+                element.textContent = element.getAttribute('data-' + currentLanguage);
+            });
         }
 
         // Smooth scrolling for navigation links
