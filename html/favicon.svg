@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>Leilani Duong-Vazquez</title>
+  <defs>
+    <linearGradient id="g" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#3498db"/>
+      <stop offset="1" stop-color="#8e44ad"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#g)"/>
+  <path fill="#ffffff" transform="translate(129.93 384.00) scale(0.18887 -0.18887)" d="M1237 422 1207 0H98V71Q122 73 167.5 78.0Q213 83 231 91Q261 104 274.5 129.0Q288 154 288 193V1209Q288 1243 276.5 1269.0Q265 1295 231 1311Q208 1323 166.5 1334.5Q125 1346 98 1348V1419H697V1348Q669 1347 624.5 1338.0Q580 1329 560 1322Q526 1310 513.5 1281.0Q501 1252 501 1219V266Q501 200 507.5 163.5Q514 127 538 107Q561 89 606.5 83.5Q652 78 734 78Q771 78 811.0 80.0Q851 82 887 88Q922 94 951.5 104.5Q981 115 995 131Q1036 177 1090.5 270.5Q1145 364 1166 422Z"/>
+</svg>

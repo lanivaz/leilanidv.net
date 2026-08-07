@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Leilani Duong-Vázquez — Actuarial Science student at the University of Connecticut, Class of 2029. Catastrophe risk and pricing intern at Yokahu, a Lloyd's of London coverholder. Seeking a Summer 2027 actuarial internship.">
     <title>Leilani Duong-Vázquez</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta name="theme-color" content="#3498db">
     <style>
         * {
             margin: 0;
@@ -211,10 +215,66 @@
             margin-bottom: 0.4rem;
         }
 
+        .card-head {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .card-head-text {
+            min-width: 0;
+        }
+
+        .card-logo {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 82px;
+            min-width: 82px;
+            padding: 0.3rem;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+            transition: transform 0.3s ease;
+        }
+
+        /* a horizontal wordmark needs breathing room at the sides, not the top */
+        .card-logo.wordmark {
+            height: 74px;
+            padding: 0.5rem 0.95rem;
+        }
+
+        .card-logo:hover {
+            transform: translateY(-2px);
+        }
+
+        .card-logo img {
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .card-logo.wordmark img {
+            max-width: 185px;
+        }
+
         .card-org {
             font-weight: bold;
             font-size: 1.05rem;
             margin-bottom: 0.2rem;
+        }
+
+        .card-org a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+        }
+
+        .card-org a:hover {
+            border-bottom-color: #fff;
         }
 
         .card-meta {
@@ -387,6 +447,27 @@
             main {
                 margin-top: 130px;
             }
+
+            /* the text block wraps to several lines on a phone, so pin the logo
+               to the title rather than letting it float at the vertical centre */
+            .card-head {
+                gap: 1rem;
+                align-items: flex-start;
+            }
+
+            .card-logo {
+                height: 64px;
+                min-width: 64px;
+            }
+
+            .card-logo.wordmark {
+                height: 58px;
+                padding: 0.35rem 0.7rem;
+            }
+
+            .card-logo.wordmark img {
+                max-width: 130px;
+            }
         }
     </style>
 </head>
@@ -469,10 +550,17 @@
                 <h2 data-en="Experience" data-es="Experiencia">Experience</h2>
 
                 <div class="experience-card featured">
-                    <h3 data-en="Data Analysis Actuarial Intern" data-es="Pasante Actuarial de Análisis de Datos">Data Analysis Actuarial Intern</h3>
-                    <p class="card-org">Yokahu</p>
-                    <p class="card-meta" data-en="Jun 2026 – Jul 2026 · 2 mos · Internship" data-es="Jun 2026 – Jul 2026 · 2 meses · Pasantía">Jun 2026 – Jul 2026 · 2 mos · Internship</p>
-                    <p class="card-meta" data-en="London, England, United Kingdom · Hybrid" data-es="Londres, Inglaterra, Reino Unido · Híbrido">London, England, United Kingdom · Hybrid</p>
+                    <div class="card-head">
+                        <a class="card-logo wordmark" href="https://yokahu.co/" target="_blank" rel="noopener" aria-label="Yokahu website">
+                            <img src="img/yokahu.png" width="413" height="109" loading="lazy" alt="Yokahu">
+                        </a>
+                        <div class="card-head-text">
+                            <h3 data-en="Data Analysis Actuarial Intern" data-es="Pasante Actuarial de Análisis de Datos">Data Analysis Actuarial Intern</h3>
+                            <p class="card-org"><a href="https://yokahu.co/" target="_blank" rel="noopener">Yokahu</a></p>
+                            <p class="card-meta" data-en="Jun 2026 – Jul 2026 · 2 mos · Internship" data-es="Jun 2026 – Jul 2026 · 2 meses · Pasantía">Jun 2026 – Jul 2026 · 2 mos · Internship</p>
+                            <p class="card-meta" data-en="London, England, United Kingdom · Hybrid" data-es="Londres, Inglaterra, Reino Unido · Híbrido">London, England, United Kingdom · Hybrid</p>
+                        </div>
+                    </div>
                     <ul>
                         <li data-en="Replaced a flat margin applied uniformly to every insured location with a dynamic one priced off each location's own contribution to portfolio catastrophe risk." data-es="Reemplacé un margen fijo aplicado por igual a cada ubicación asegurada por uno dinámico, calculado según la contribución de cada ubicación al riesgo catastrófico de la cartera.">
                             Replaced a flat margin applied uniformly to every insured location with a dynamic one priced off each location's own contribution to portfolio catastrophe risk.
@@ -493,10 +581,17 @@
                 </div>
 
                 <div class="experience-card">
-                    <h3 data-en="Founder and Owner" data-es="Fundadora y Propietaria">Founder and Owner</h3>
-                    <p class="card-org">Lovely by Leilani</p>
-                    <p class="card-meta" data-en="Apr 2020 – Present · Self-employed" data-es="Abr 2020 – Presente · Autoempleada">Apr 2020 – Present · Self-employed</p>
-                    <p class="card-meta" data-en="Middletown, Connecticut, United States · Hybrid" data-es="Middletown, Connecticut, Estados Unidos · Híbrido">Middletown, Connecticut, United States · Hybrid</p>
+                    <div class="card-head">
+                        <a class="card-logo" href="https://www.lovelybyleilani.com/" target="_blank" rel="noopener" aria-label="Lovely by Leilani website">
+                            <img src="img/lovely-by-leilani.png" width="256" height="254" loading="lazy" alt="Lovely by Leilani">
+                        </a>
+                        <div class="card-head-text">
+                            <h3 data-en="Founder and Owner" data-es="Fundadora y Propietaria">Founder and Owner</h3>
+                            <p class="card-org"><a href="https://www.lovelybyleilani.com/" target="_blank" rel="noopener">Lovely by Leilani</a></p>
+                            <p class="card-meta" data-en="Apr 2020 – Present · Self-employed" data-es="Abr 2020 – Presente · Autoempleada">Apr 2020 – Present · Self-employed</p>
+                            <p class="card-meta" data-en="Middletown, Connecticut, United States · Hybrid" data-es="Middletown, Connecticut, Estados Unidos · Híbrido">Middletown, Connecticut, United States · Hybrid</p>
+                        </div>
+                    </div>
                     <ul>
                         <li data-en="Set retail pricing and margins across the product line, tracking per-piece material cost and sell-through to decide what to make more of." data-es="Fijo los precios de venta y los márgenes de toda la línea de productos, siguiendo el costo de materiales por pieza y la rotación para decidir qué producir más.">
                             Set retail pricing and margins across the product line, tracking per-piece material cost and sell-through to decide what to make more of.
@@ -514,14 +609,21 @@
                             Design and make every piece by hand from locally sourced sea glass, six years and counting.
                         </li>
                     </ul>
-                    <a href="https://lovelybyleilani.com" target="_blank" rel="noopener" class="site-link">lovelybyleilani.com</a>
+                    <a href="https://www.lovelybyleilani.com/" target="_blank" rel="noopener" class="site-link">lovelybyleilani.com</a>
                 </div>
 
                 <div class="experience-card muted">
-                    <h3 data-en="Cashier" data-es="Cajera">Cashier</h3>
-                    <p class="card-org">Big Y World Class Market</p>
-                    <p class="card-meta" data-en="May 2024 – Jul 2025 · 1 yr 3 mos · Part-time" data-es="Mayo 2024 – Jul 2025 · 1 año 3 meses · Medio tiempo">May 2024 – Jul 2025 · 1 yr 3 mos · Part-time</p>
-                    <p class="card-meta" data-en="Middletown, Connecticut, United States · On-site" data-es="Middletown, Connecticut, Estados Unidos · Presencial">Middletown, Connecticut, United States · On-site</p>
+                    <div class="card-head">
+                        <a class="card-logo" href="https://www.bigy.com/" target="_blank" rel="noopener" aria-label="Big Y World Class Market website">
+                            <img src="img/big-y.png" width="86" height="86" loading="lazy" alt="Big Y World Class Market">
+                        </a>
+                        <div class="card-head-text">
+                            <h3 data-en="Cashier" data-es="Cajera">Cashier</h3>
+                            <p class="card-org"><a href="https://www.bigy.com/" target="_blank" rel="noopener">Big Y World Class Market</a></p>
+                            <p class="card-meta" data-en="May 2024 – Jul 2025 · 1 yr 3 mos · Part-time" data-es="Mayo 2024 – Jul 2025 · 1 año 3 meses · Medio tiempo">May 2024 – Jul 2025 · 1 yr 3 mos · Part-time</p>
+                            <p class="card-meta" data-en="Middletown, Connecticut, United States · On-site" data-es="Middletown, Connecticut, Estados Unidos · Presencial">Middletown, Connecticut, United States · On-site</p>
+                        </div>
+                    </div>
                     <ul>
                         <li data-en="Ran a register through peak store hours and closed out a balanced drawer across cash and card." data-es="Manejé una caja registradora durante las horas de mayor afluencia y cerré con el saldo cuadrado entre efectivo y tarjeta.">
                             Ran a register through peak store hours and closed out a balanced drawer across cash and card.
